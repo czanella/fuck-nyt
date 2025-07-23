@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fuck NYT</title>
+
+  <meta property="og:title" content="Fuck NYT" />
+  <meta property="og:description" content="A tool to break NYT's paywall. Fuck them." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="bookmarklet.html" />
+  <meta property="og:image" content="share-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fuck NYT" />
+  <meta name="twitter:description" content="A tool to break NYT's paywall. Fuck them." />
+  <meta name="twitter:image" content="share-image.png" />
+
+  <style>
+    html,
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      border: 0;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 48px;
+      ;
+      text-transform: uppercase;
+    }
+
+    .bookmarklet {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #ff0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      margin-top: 1rem;
+      cursor: move;
+      font-size: 30px;
+    }
+
+    .bookmarklet:hover {
+      background: #ee0000;
+    }
+
+    .instructions {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Fuck NYT</h1>
+  <p>Need to read something from the NYT and don't want to give them your personal info nor pay? No problem!</p>
+  <p>Drag the button below to your bookmarks bar and, when a NYT paywall appears, just click the bookmark:</p>
+
+  <!-- Replace this href with your actual bookmarklet code -->
+  <a class="bookmarklet"
+    href="javascript:(()=>{document.querySelector('[data-testid=\'onsite-messaging-unit-gateway\']').remove();Array.from(document.querySelectorAll('div')).filter(div => div.children.length === 0).forEach(n => n.remove());document.querySelector('[data-testid=\'vi-gateway-container\']').style.setProperty('overflow','auto');})()">
+    💥 Fuck NYT 💥
+  </a>
+
+  <p class="instructions">
+    If your bookmarks bar is hidden, press
+    <strong>Ctrl+Shift+B</strong> (Windows) or
+    <strong>Cmd+Shift+B</strong> (Mac) to show it.
+  </p>
+
+</body>
+
+</html>
